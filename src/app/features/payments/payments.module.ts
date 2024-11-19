@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PaymentsComponent } from './payments.component';
 import { Shared } from 'src/app/shared/shared.module';
+import { PaymentsRoutingModule } from './payments-routing.module';
 
 @NgModule({
-  declarations: [
-    PaymentsComponent,
-  ],
+  declarations: [PaymentsComponent],
   imports: [
-    Shared
-
+    Shared, 
+    PaymentsRoutingModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
-export class PaymentsModule { }
+export class PaymentsModule {}
