@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "Angular.Demo"
+  "cli": {
+    "analytics": "6e4379d8-f25e-474a-8671-301a779a8e43"
+  }
 }

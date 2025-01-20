@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer,SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-pdf-viewer',
   templateUrl: './pdf-viewer.component.html',
@@ -16,13 +17,21 @@ export class PdfViewerComponent {
     }
   }
   download(type: string) {
-    if (type === 'pdf') {
+
       window.open(this.pdfSrc, '_blank');
-    } else if (type === 'excel') {
-      alert('Download Excel functionality not implemented.');
-    }
+    
   }
   closeModal() {
     console.log('Close modal');
+  }
+  /**
+   *
+   */
+  constructor(private sanitizer: DomSanitizer) {
+   
+    
+  }
+  ngOnInit(){
+    this.pdfSrc=this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfSrc) as string;
   }
 }

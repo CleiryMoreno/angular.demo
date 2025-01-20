@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     PaymentsModule,
     PatientsModule,
-    AppoinmentsModule
+    AppoinmentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

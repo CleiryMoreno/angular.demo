@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PatientsComponent } from './features/patients/patients.component';
+import { PdfViewerComponent } from './features/pdf/pdf-viewer.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: PatientsComponent
+    component: PdfViewerComponent
   },
   {
     path: 'payments',
